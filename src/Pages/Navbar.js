@@ -10,7 +10,10 @@ function Navbar() {
         <li><Link to="/about">About</Link></li>
         <li><Link to="/contact">Contact</Link></li>
     </ul>
+    <div className='end'>
     <Link to="/login">Login</Link>
+    <Link to="/register">Register</Link>
+    </div>
     </div>
     </>
   )

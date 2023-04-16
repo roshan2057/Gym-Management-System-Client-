@@ -1,0 +1,19 @@
+.container{
+    display:flex;
+    justify-content: space-between;
+}
+.box1{
+display: flex;
+flex-flow: 1;
+}
+.box1{
+    border: 5px solid;
+}
+
+.box2{
+    border: 5px solid;
+}
+
+.box3{
+    border: 5px solid;
+}

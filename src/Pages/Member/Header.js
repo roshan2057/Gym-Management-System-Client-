@@ -8,7 +8,7 @@ const Header = () => {
 
 
 const logout=()=>{
-  Cookies.remove('logged');
+  Cookies.remove('token');
   return navigate("/");
  
     };
@@ -30,9 +30,6 @@ const logout=()=>{
     </div>
     </>
   )
-
-// const logout=()=>{
-//   Cookies.remove('logged')
-    }
+  }
 
 export default Header

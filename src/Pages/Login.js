@@ -12,12 +12,15 @@ let navigate= useNavigate();
     event.preventDefault();
   const phone =event.target.phone.value;
   const password = event.target.password.value;
-  axios.post("http://192.168.100.3:8000/data",{
+  axios.post("http://192.168.100.3:8000/user/login",{
     phone,
     password
   }).then(response=>{
-    console.log(response.data)
-    Cookies.set('logged','true');
+    
+    console.log(response)
+    const token = response.data.token;
+    Cookies.set('token',token);
+    // Cookies.set('logged','true');
     return navigate("/user");
     
   

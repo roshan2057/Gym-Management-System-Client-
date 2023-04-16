@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 const Auth = () => {
 
-const coo = Cookies.get('logged');
+const coo = Cookies.get('token');
 if(coo){
   return true;
 }

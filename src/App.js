@@ -9,6 +9,7 @@ import ProtectedRoutes from './ProtectedRoutes';
 import Dashboard from './Pages/Member/Dashboard';
 import Header from './Pages/Member/Header';
 import Fee from './Pages/Member/Fee';
+import Register from './Pages/Register';
 
 
 
@@ -25,6 +26,7 @@ function App() {
 <Route path='/about' element={<><Navbar/><About></About></>}></Route>
 <Route path='/contact' element={<><Navbar></Navbar><Contact></Contact></>}></Route>
 <Route path='/login' element={<><Navbar/><Login></Login></>}></Route>
+<Route path='/register' element={<><Navbar/><Register></Register></>}></Route>
 
 <Route element={<ProtectedRoutes></ProtectedRoutes>}>
 <Route path='/user' element={<><Header></Header><Dashboard></Dashboard></>}></Route>

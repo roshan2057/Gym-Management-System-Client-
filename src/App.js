@@ -5,11 +5,10 @@ import Login from './Pages/Login';
 import Navbar from './Pages/Navbar';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
-import ProtectedRoutes from './ProtectedRoutes';
 import Dashboard from './Pages/Member/Dashboard';
-import Header from './Pages/Member/Header';
 import Fee from './Pages/Member/Fee';
 import Register from './Pages/Register';
+import {UserElement} from './Roles';
 
 
 
@@ -19,27 +18,60 @@ function App() {
   return ( 
     <>
     
-
+<Navbar></Navbar>
 
     <Routes>    
-<Route path='/' element={<><Navbar/><Home></Home></>}></Route>
-<Route path='/about' element={<><Navbar/><About></About></>}></Route>
-<Route path='/contact' element={<><Navbar></Navbar><Contact></Contact></>}></Route>
-<Route path='/login' element={<><Navbar/><Login></Login></>}></Route>
-<Route path='/register' element={<><Navbar/><Register></Register></>}></Route>
-
-<Route element={<ProtectedRoutes></ProtectedRoutes>}>
-<Route path='/user' element={<><Header></Header><Dashboard></Dashboard></>}></Route>
-<Route path='/user/fee' element={<><Header></Header><Fee></Fee></>}></Route>
-<Route path='/user/shedule' element={<><Header></Header><Login></Login></>}></Route>
-<Route path='/user' element={<><Header></Header><Login></Login></>}></Route>
-
-</Route>
+<Route path='/' element={
+  <PublicElement>
+<Home></Home>
+  </PublicElement>
+}></Route>
+<Route path='/about' element={
+<PublicElement>
+<About></About>
+</PublicElement>
+}></Route>
+<Route path='/contact' element={
+<PublicElement>
+<Contact></Contact>
+</PublicElement>
+}></Route>
+<Route path='/login' element={
+<PublicElement>
+<Login></Login>
+</PublicElement>
+}></Route>
+<Route path='/register' element={
+<PublicElement>
+<Register></Register>
+</PublicElement>
+}></Route>
+<Route path='/user' element={
+<UserElement>
+<Dashboard></Dashboard>
+</UserElement>
+}></Route>
+<Route path='/user/fee' element={
+<UserElement>
+<Fee></Fee>
+</UserElement>
+}></Route>
+<Route path='/user/shedule' element={
+<UserElement>
+<Login></Login>
+</UserElement>
+}></Route>
 
     </Routes>
     
     </>
   );
 }
+
+function PublicElement({children}){
+return <>{children}</>
+}
+
+
 
 export default App;

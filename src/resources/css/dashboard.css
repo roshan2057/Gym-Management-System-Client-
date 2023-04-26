@@ -1,19 +1,46 @@
-.container{
-    display:flex;
+.container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-}
-.box1{
-display: flex;
-flex-flow: 1;
-}
-.box1{
-    border: 5px solid;
+    margin:15px;
+
 }
 
-.box2{
-    border: 5px solid;
+.box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;;
+    background-color: rgba(92, 89, 89, 0.5);
 }
 
-.box3{
+form {
+    margin-top:0px;
+    display: block;
+    border: none;
+    text-align: center;
+}
+
+input{
+    text-align: center;
+}
+
+form p{
+    background-color: beige;
+    /* padding:10px; */
+    border-radius: 10px;
+}
+
+
+
+.box2 {
+    align-self: flex-start;
+    border: 5px solid;
+    padding:20px 40px 20px 40px;
+    border-radius: 20px;
+    height: auto;
+}
+
+.box3 {
     border: 5px solid;
 }

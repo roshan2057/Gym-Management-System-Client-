@@ -1,15 +1,21 @@
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 
 
 const Auth = () => {
 
-const coo = Cookies.get('token');
-if(coo){
-  return true;
+// const coo = Cookies.get('token');
+const usertype = "admin";
+
+// if(coo){
+//   return true;
+// }
+// else{
+//   return false;
+// }
+// }
+
+return usertype;
 }
-else{
-  return false;
-}
-}
+
 
 export default Auth

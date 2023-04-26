@@ -21,6 +21,7 @@ const logout=()=>{
       <li><Link to="/user">Dashboard</Link></li>
         <li><Link to="/user/fee">Fee</Link></li>
         <li><Link to="/user/shedule">Shedule</Link></li>
+        <li><Link to="/admin/viewmember">View Members</Link></li>
     </ul>
     <div className='button'>
 

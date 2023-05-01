@@ -8,7 +8,10 @@ import Contact from './Pages/Contact';
 import Dashboard from './Pages/Member/Dashboard';
 import Fee from './Pages/Member/Fee';
 import Register from './Pages/Register';
-import {UserElement} from './Roles';
+import {AdminElement, UserElement} from './Roles';
+import { Profile } from './Pages/Member/Profile';
+import Viewmembers from './Pages/Admin/Viewmembers';
+import Viewbill from './Pages/Admin/Viewbill';
 
 
 
@@ -56,10 +59,29 @@ function App() {
 <Fee></Fee>
 </UserElement>
 }></Route>
+
 <Route path='/user/shedule' element={
 <UserElement>
 <Login></Login>
 </UserElement>
+}></Route>
+
+<Route path='/user/profile' element={
+<UserElement>
+<Profile/>
+</UserElement>
+}></Route>
+
+<Route path='/admin/viewmembers' element={
+<AdminElement>
+  <Viewmembers></Viewmembers>
+</AdminElement>
+}></Route>
+
+<Route path='/admin/bill' element={
+  <AdminElement>
+    <Viewbill></Viewbill>
+  </AdminElement>
 }></Route>
 
     </Routes>

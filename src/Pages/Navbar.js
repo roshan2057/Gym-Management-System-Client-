@@ -15,14 +15,15 @@ function Navbar() {
           <>
         <li><Link to="/user">Home</Link></li>
         <li><Link to="/user/fee">Fee</Link></li>
-        <li><Link to="/user/shedule">Shedule</Link></li>
+        <li><Link to="/user/shedule">Statement</Link></li>
           </>: null}
           
        
 {(usertype ==="admin")?
 <>
-<li><Link to="/admin/viewmember">View Members</Link></li>
+<li><Link to="/admin/viewmembers">View Members</Link></li>
 <li><Link to="/admin/viewpackage">View Package</Link></li>
+<li><Link to="/admin/bill">View Payment</Link></li>
 
 </>:null}
 
@@ -36,7 +37,7 @@ function Navbar() {
     <div className='end'>
     {(usertype === "user" || usertype ==="admin")?
 <>
-<Link to ="/profile">Profile</Link>
+<Link to ="/user/profile">Profile</Link>
 <Link  to="/logout">Logout</Link>
 
 </>:<>

@@ -1,0 +1,21 @@
+.main{
+    position: relative;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+ }
+ .main table{
+    width: 70%;
+ }
+table th{
+    padding: 15px;
+}
+table td{
+    padding: 5px 40px ;
+}
+.main h1{
+    margin-top: 5%;
+    text-align: center;
+}

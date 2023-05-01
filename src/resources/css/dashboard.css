@@ -1,8 +1,8 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin:15px;
+    justify-content: space-around;
+    padding-top: 150px;
 
 }
 
@@ -12,6 +12,7 @@
     align-items: center;
     border-radius: 20px;;
     background-color: rgba(92, 89, 89, 0.5);
+    padding: 10px;
 }
 
 form {
@@ -42,5 +43,9 @@ form p{
 }
 
 .box3 {
-    border: 5px solid;
+    /* border: 5px solid; */
+    width: 30%;
+}
+table td{
+    padding:3px 10px;
 }
